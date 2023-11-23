@@ -1,39 +1,41 @@
-# Movie Recommendation System With sentiment_analysis
+# Movie Recommendation System with Sentiment Analysis
 
-Content Based Recommender System recommends movies similar to the movie user likes and analyses the sentiments on the reviews given by the user for that movie.
+The Movie Recommendation System with Sentiment Analysis is a content-based recommender system that suggests movies similar to the ones a user likes. Additionally, it incorporates sentiment analysis on user reviews to enhance the recommendation process.
 
-<blockquote>
-   <b>Note</b>: The application has been updated to a newer version. Get the source code of the newer version <a href="https://github.com/bwambale03/MovieRec">here</a>
-</blockquote>
+> **Note:** The application has been updated to a newer version. Access the source code of the latest version [here](https://github.com/bwambale03/MovieRec).
 
-chrome
-The details of the movies(title, genre, runtime, rating, poster, etc) are fetched using an API by TMDB, https://www.themoviedb.org/documentation/api, and using the IMDB id of the movie in the API, I did web scraping to get the reviews given by the user in the IMDB site using `beautifulsoup4` and performed sentiment analysis on those reviews.
+![GIF](./static/mrswsa.gif)
 
-## How to get the API key?
+## Overview
 
-Create an account in https://www.themoviedb.org/, click on the `API` link from the left hand sidebar in your account settings and fill all the details to apply for API key. You will see the API key in your `API` sidebar once your request is approved.
+Movie details such as title, genre, runtime, rating, poster, etc., are fetched using an API provided by TMDB (The Movie Database): [TMDB API Documentation](https://www.themoviedb.org/documentation/api). For sentiment analysis, user reviews from the IMDb site are extracted using `beautifulsoup4` after obtaining the IMDb ID from the TMDB API.
 
-## How to run the project?
+## How to Obtain an API Key?
 
-1. Install all the libraries mentioned in the [req'ts.txt](https://github.com/kishan0725/Movie-Recommendation-System-with-Sentiment-Analysis/blob/master/requirements.txt) file. 
-## NB
-# consider downgrading the resources in req'ts.txt file since the models used here were trained using these specific versions. consider refining the models to suite the latest versions on your machine
-2. Clone this repository in your local system.
-3. Replace YOUR_API_KEY in the `main.py` file.
+1. Create an account on [TMDB](https://www.themoviedb.org/).
+2. In your account settings, click on the `API` link from the left-hand sidebar.
+3. Fill in all the required details to apply for an API key.
+4. Once your request is approved, you can find the API key in the `API` sidebar.
+
+## How to Run the Project?
+
+1. Install all the required libraries mentioned in the [requirements.txt](https://github.com/kishan0725/Movie-Recommendation-System-with-Sentiment-Analysis/blob/master/requirements.txt) file.
+   > **Note:** Consider downgrading the resources in the `requirements.txt` file as the models were trained using specific versions. Adjust the models to suit the latest versions on your machine.
+
+2. Clone this repository to your local system.
+3. Replace `YOUR_API_KEY` in the `main.py` file with your TMDB API key.
 4. Open the command prompt from your project directory and run the command `python main.py`.
-5. Go to your browser and type `http://127.0.0.1:5000/` in the address bar.
-6.Done
-## Similarity Score : 
+5. Open your browser and navigate to `http://127.0.0.1:5000/`.
+6. You are done!
 
-   How does it decide which item is most similar to the item user likes? Here we use the similarity scores.
-   
-   It is a numerical value ranges between zero to one which helps to determine how much two items are similar to each other on a scale of zero to one. This similarity score is obtained measuring the similarity between the text details of both of the items. So, similarity score is the measure of similarity between given text details of two items. This can be done by cosine-similarity.
+## Similarity Score:
 
-### Sources of the datasets 
+How does the system determine which item is most similar to the one the user likes? The similarity score plays a crucial role. This numerical value ranges from zero to one and helps quantify how similar two items are on a scale from zero to one. The similarity score is obtained by measuring the similarity between the text details of two items, and it is often calculated using cosine-similarity.
+
+## Sources of the Datasets:
 
 1. [IMDB 5000 Movie Dataset](https://www.kaggle.com/carolzhangdc/imdb-5000-movie-dataset)
 2. [The Movies Dataset](https://www.kaggle.com/rounakbanik/the-movies-dataset)
-3. [List of movies in 2018](https://en.wikipedia.org/wiki/List_of_American_films_of_2018)
-4. [List of movies in 2019](https://en.wikipedia.org/wiki/List_of_American_films_of_2019)
-5. [List of movies in 2020](https://en.wikipedia.org/wiki/List_of_American_films_of_2020)
-
+3. [List of Movies in 2018](https://en.wikipedia.org/wiki/List_of_American_films_of_2018)
+4. [List of Movies in 2019](https://en.wikipedia.org/wiki/List_of_American_films_of_2019)
+5. [List of Movies in 2020](https://en.wikipedia.org/wiki/List_of_American_films_of_2020)
