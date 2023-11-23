@@ -6,8 +6,7 @@ Content Based Recommender System recommends movies similar to the movie user lik
    <b>Note</b>: The application has been updated to a newer version. Get the source code of the newer version <a href="https://github.com/bwambale03/MovieRec">here</a>
 </blockquote>
 
-![GIF](./static/mrswsa.gif)
-
+chrome
 The details of the movies(title, genre, runtime, rating, poster, etc) are fetched using an API by TMDB, https://www.themoviedb.org/documentation/api, and using the IMDB id of the movie in the API, I did web scraping to get the reviews given by the user in the IMDB site using `beautifulsoup4` and performed sentiment analysis on those reviews.
 
 ## How to get the API key?
